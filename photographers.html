@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photographers</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
 
@@ -13,27 +14,31 @@
         <a href="index.html" class="header--home">
             <img src="./img/logo/logo_fisheye.png" alt="Logo de FishEye">
         </a>
-
-        <section class="header--presentation">
-            <article class="header--presentation__article">
-                <div class="header--presentation__article--photograph">
-                    <h2 class="header--presentation__article--photograph__name">Mimi Keel</h2>
-                    <p class="header--presentation__article--photograph__loca">London, UK</p>
-                    <p class="header--presentation__article--photograph__description">Voir le beau dans le quotidien</p>
-                    <ul class="header--presentation__article--photograph__filters">
+    </header>
+    
+    <main class="main">
+        
+        <section class="main--presentation">
+            <article class="main--presentation__article">
+                <div class="main--presentation__article--photograph">
+                    <h2 class="main--presentation__article--photograph__name">Mimi Keel</h2>
+                    <p class="main--presentation__article--photograph__loca">London, UK</p>
+                    <p class="main--presentation__article--photograph__description">Voir le beau dans le quotidien</p>
+                    <ul class="main--presentation__article--photograph__filters">
                         <li>#portrait</li>
                         <li>#events</li>
                         <li>#travel</li>
                         <li>#animals</li>
                     </ul>
                 </div>
+                <button class="main--presentation__article--btn">Contactez-moi</button>
                 <img src="./img/photographers_id/MimiKeel.jpg" alt="Portrait de Mimi Keel">
             </article>
         </section>
-    </header>
-    
-    <main class="main">
-        <button class="main--btn">Contactez-moi</button>
+
+        <section class="main--select">
+            <h3>Trier par</h3>
+        </section>
 
         <article class="main--article">
             <a href="#" class="main--article__redirect">
@@ -41,7 +46,10 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
 
@@ -51,7 +59,10 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
 
@@ -61,7 +72,10 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
 
@@ -71,7 +85,10 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
 
@@ -81,7 +98,10 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
 
@@ -91,9 +111,18 @@
             </a>
             <div class="main--article__description">
                 <h2 class="main--article__description--title">Lonesome</h2>
-                <span class="main--article__description--like">12 coeur</span>
+                <div class="main--article__description--like">
+                    <span class="main--article__description--like__number">12</span>
+                    <i class="far fa-heart main--article__description--like__heart"></i>
+                </div>
             </div>
         </article>
+
+        <div class="main--totalLike">
+            <span>297 081</span>
+            <i class="far fa-heart"></i>
+            <span>300€ / jour</span>
+        </div>
 
     </main>
 </body>

@@ -1,4 +1,4 @@
-// HEADER HOMEPAGE
+// HEADER HOMEPAGE + PHOTOGRAPHER PAGE
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -37,56 +37,5 @@
         font-size: 20px;
         color: $color-text;
         text-align: right;
-    }
-}
-
-// HEADER PHOTOGRAPHER PAGE 
-.header{
-    &--presentation{
-        width: 100%;
-        margin-top: 2rem;
-        &__article{
-            width: 100%;
-            justify-content: space-between;
-            display: flex;
-            &--photograph{
-                width: 60%;
-                &__name{
-                    font-size: 35px;
-                    font-weight: inherit;
-                    color: $color-name;
-                    margin-bottom: 5px;
-                }
-                &__loca{
-                    font-size: 18px;
-                    color: $color-text;
-                    margin-bottom: 5px;
-                }
-                &__description{
-                    font-size: 16px;
-                    color: grey;
-                    margin-bottom: 5px;
-                }
-                &__filters{
-                    text-decoration: none;
-                    display: flex;
-                    flex-wrap: wrap;
-                    li{
-                        list-style: none;
-                        color: $color-text;
-                        border: 1px solid $color-border-filters;
-                        padding: 3px 10px;
-                        border-radius: 20px;
-                        margin: 0 5px 5px 0;
-                    }
-                }
-            }
-            img{
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-        }
     }
 }

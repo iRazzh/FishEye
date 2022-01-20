@@ -13,7 +13,7 @@ function generateSliderLightbox() {
     
     let count = 0;
     
-    function slidePrecedente() {
+    function nextSlide() {
       items[count].classList.remove("active");
     
       if (count > 0) {
@@ -24,7 +24,7 @@ function generateSliderLightbox() {
       items[count].classList.add("active");
       console.log(count);
     }
-    precedent.addEventListener("click", slidePrecedente);
+    precedent.addEventListener("click", nextSlide);
     
     function slideSuivante() {
       items[count].classList.remove("active");
@@ -39,19 +39,21 @@ function generateSliderLightbox() {
     }
     suivant.addEventListener("click", slideSuivante);
     
-    for (i = 0; i < aModal.length; i++) {
-      aModal[i].addEventListener("click", function () {
-        modal.style.display = "block";
-        if (modal.style.display == "block") {
-          btnContact.style.display = "none";
-        }
-      });
-    }
     function closeModal() {
       modal.style.display = "none";
       if (modal.style.display == "none") {
         btnContact.style.display = "block";
       }
     }
+
     btnClose.addEventListener("click", closeModal);
+    for (i = 0; i < aModal.length; i++) {
+      aModal[i].addEventListener("click", function () {
+        modal.style.display = "block";
+        if (modal.style.display == "block") {
+          btnContact.style.display = "none";
+
+        }
+      });
+    }
 }

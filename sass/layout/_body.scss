@@ -1,152 +1,228 @@
 // BODY HOMEPAGE
-.firstAuthor{
-    width: 100%;
-    article{
-        width: 80%;
-        margin: 2rem auto;
+.authors {
+  width: 100%;
+  &--article {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+    &__redirection {
+      text-decoration: none;
+      &--img{
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      &--name {
         text-align: center;
-        a{
-            text-decoration: none;
-            img{
-                width: 13rem;
-                height: 13rem;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-            .author--name{
-                text-align: center;
-                color: $color-name;
-                margin: 1rem 0;
-            }
-            .author--loca{
-                text-align: center;
-                color: $color-text;
-                margin-bottom: 5px;
-            }
-            .author--description{
-                text-align: center;
-                color: black;
-                font-size: 14px;
-                margin-bottom: 5px;
-            }
-            .author--price{
-                text-align: center;
-                color: grey;
-                font-size: 17px;
-                margin-bottom: 10px;
-            }
-            .author--filters{
-                display: flex;
-                list-style: none;
-                justify-content: center;
-                li{
-                    color: $color-text;
-                    border: 1px solid $color-border-filters;
-                    border-radius: 20px;
-                    padding: 3px 10px;
-                    margin: 0 5px;
-                    font-weight: bold;
-                }
-            }
-        }
+        color: $color-name;
+        margin: 1rem 0;
+      }
     }
+      &__loca {
+        text-align: center;
+        color: $color-text;
+        margin-bottom: 5px;
+      }
+      &__description {
+        text-align: center;
+        color: black;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      &__price {
+        text-align: center;
+        color: grey;
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+  }
 }
 
 // BODY PHOTOGRAPHER PAGE
-.main{
+.main {
+  padding: 1rem;
+  &--presentation {
+    width: 100%;
+    margin-bottom: 2rem;
+    &__article {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+      &--photograph {
+        width: 60%;
+        &__name {
+          font-size: 35px;
+          font-weight: inherit;
+          color: $color-name;
+          margin-bottom: 5px;
+        }
+        &__loca {
+          font-size: 18px;
+          color: $color-text;
+          margin-bottom: 5px;
+        }
+        &__description {
+          font-size: 16px;
+          color: grey;
+          margin-bottom: 5px;
+        }
+        &__filters {
+          text-decoration: none;
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            list-style: none;
+            color: $color-text;
+            border: 1px solid $color-border-filters;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin: 0 2px 5px 0;
+          }
+        }
+      }
+      &--btn {
+        padding: 10px 35px;
+        border-radius: 5px;
+        border: none;
+        background-color: $color-text;
+        color: white;
+        font-weight: bold;
+        position: fixed;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+  &--select {
+    display: none;
+  }
+  &--medias{
+    &__article {
+      margin-bottom: 2rem;
+      &--redirect {
+        img, video {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+      &--description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__title {
+          color: $color-text;
+          font-weight: inherit;
+        }
+        &__like {
+          cursor: pointer;
+          &--number {
+            color: $color-text;
+            font-weight: bold;
+          }
+          &--heart {
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+  &--totalLike {
+    display: none;
+  }
+  &--form {
+    width: 90%;
+    background-color: $color-bg-like;
     padding: 1rem;
-    &--presentation{
+    border-radius: 5px;
+    text-align: left;
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    &__titleClose {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      &--closeModal {
+        background-color: $color-bg-like;
+        border: inherit;
+        color: white;
+        font-size: 25px;
+      }
+    }
+    &__input {
+      margin-bottom: 1rem;
+      &:nth-child(5) {
+        margin-bottom: 3rem;
+      }
+      input,
+      textarea {
         width: 100%;
-        margin-bottom: 2rem;
-        &__article{
-            width: 100%;
-            justify-content: space-between;
-            display: flex;
-            &--photograph{
-                width: 60%;
-                &__name{
-                    font-size: 35px;
-                    font-weight: inherit;
-                    color: $color-name;
-                    margin-bottom: 5px;
-                }
-                &__loca{
-                    font-size: 18px;
-                    color: $color-text;
-                    margin-bottom: 5px;
-                }
-                &__description{
-                    font-size: 16px;
-                    color: grey;
-                    margin-bottom: 5px;
-                }
-                &__filters{
-                    text-decoration: none;
-                    display: flex;
-                    flex-wrap: wrap;
-                    li{
-                        list-style: none;
-                        color: $color-text;
-                        border: 1px solid $color-border-filters;
-                        padding: 3px 10px;
-                        border-radius: 20px;
-                        margin: 0 2px 5px 0;
-                    }
-                }
-            }
-            &--btn{
-                padding: 10px 35px;
-                border-radius: 5px;
-                border: none;
-                background-color: $color-text;
-                color: white;
-                font-weight: bold;
-                position: fixed;
-                bottom: 25px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            img{
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-        }
+        padding: 1rem;
+        border-radius: 5px;
+        border: inherit;
+      }
+      textarea {
+        padding: 2rem 1rem;
+      }
     }
-    &--select{
-        display: none;
+    &__send {
+      padding: 1rem;
+      color: white;
+      background-color: $color-text;
+      border-radius: 5px;
+      border: inherit;
     }
-    &--article{
-        margin-bottom: 2rem;
-        &__redirect{
-            img{
-                width: 100%;
-                height: 20rem;
-                object-fit: cover;
-                border-radius: 10px;
-            }
-        }
-        &__description{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &--title{
-                color: $color-text;
-                font-weight: inherit;
-            }
-            &--like{
-                &__number{
-                    color: $color-text;
-                    font-weight: bold;
-                }
-                &__heart{
-                    color: $color-text;
-                }
-            }
-        }
-    }
-    &--totalLike{
-        display: none;
-    }
+  }
+  &--modal{
+      display: flex;
+      flex-wrap: wrap;
+      display: none;
+      position: fixed;
+      top: 34%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      &__close{
+        text-align: right;
+        color: $color-text;
+        width: 96%;
+        font-size: 20px;
+        padding: 0.5rem 0;
+        transform: translateY(30px);
+      }
+      &__allImg{
+          width: 80%;
+          margin: 0 auto;
+          &--pictures{
+              width: 100%;
+              height: 450px;
+              object-fit: cover;
+              display: none;
+          }
+          &--pictures.active{
+              display: block;
+          }
+      }
+      &__direction{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          transform: translateY(-250px);
+          .btnLeft, .btnRight{
+              font-size: 40px;
+              color: $color-text;
+          }
+      }
+  }
 }

@@ -1,129 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photographers</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <header class="header">
-        <a href="index.html" class="header--home">
-            <img src="./img/logo/logo_fisheye.png" alt="Logo de FishEye">
-        </a>
+      <a href="index.html" class="header--home">
+        <img src="./img/logo/logo_fisheye.png" alt="Logo de FishEye" />
+      </a>
     </header>
-    
+
     <main class="main">
-        
-        <section class="main--presentation">
-            <article class="main--presentation__article">
-                <div class="main--presentation__article--photograph">
-                    <h2 class="main--presentation__article--photograph__name">Mimi Keel</h2>
-                    <p class="main--presentation__article--photograph__loca">London, UK</p>
-                    <p class="main--presentation__article--photograph__description">Voir le beau dans le quotidien</p>
-                    <ul class="main--presentation__article--photograph__filters">
-                        <li>#portrait</li>
-                        <li>#events</li>
-                        <li>#travel</li>
-                        <li>#animals</li>
-                    </ul>
-                </div>
-                <button class="main--presentation__article--btn">Contactez-moi</button>
-                <img src="./img/photographers_id/MimiKeel.jpg" alt="Portrait de Mimi Keel">
-            </article>
-        </section>
+      <section class="main--presentation">
+      </section>
 
-        <section class="main--select">
-            <h3>Trier par</h3>
-        </section>
+      <section class="main--select">
+        <h3>Trier par</h3>
+        <select name="orderby" id="orderby">
+          <option value="popularite" class="sort">Popularité</option>
+          <option value="date" class="sort">Date</option>
+          <option value="titre" class="sort">Titre</option>
+        </select>
+      </section>
 
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Travel_Lonesome.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
+      <section class="main--medias">
+      </section>
 
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Travel_HillsideColor.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
+      <div class="main--totalLike">
+        <span class="main--totaLike__number"></span>
+        <i class="far fa-heart heartLike"></i>
+        <span class="main--totalLike__price">300€ / jour</span>
+      </div>
 
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Portrait_Wednesday.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
-
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Portrait_Nora.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
-
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Portrait_Background.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
-
-        <article class="main--article">
-            <a href="#" class="main--article__redirect">
-                <img src="./img/photographers_pictures/Mimi/Event_SeasideWedding.jpg" alt="Image">
-            </a>
-            <div class="main--article__description">
-                <h2 class="main--article__description--title">Lonesome</h2>
-                <div class="main--article__description--like">
-                    <span class="main--article__description--like__number">12</span>
-                    <i class="far fa-heart main--article__description--like__heart"></i>
-                </div>
-            </div>
-        </article>
-
-        <div class="main--totalLike">
-            <span>297 081</span>
-            <i class="far fa-heart"></i>
-            <span>300€ / jour</span>
+      <form action="" method="" id="contact_modal" class="main--form">
+        <div class="main--form__titleClose">
+          <h2 class="main--form__titleClose__title">
+            Contactez-moi
+            <span class="main--modal__form--titleClose__title--name"
+              >Mimi Keel</span
+            >
+          </h2>
+          <button class="main--form__titleClose--closeModal">X</button>
         </div>
+        <div class="main--form__input">
+          <label for="firstname" id="">Prénom</label>
+          <input
+            name="firstname"
+            id=""
+            aria-labelledby="label-firstname"
+            placeholder="Prénom"
+          />
+        </div>
+        <div class="main--form__input">
+          <label for="lastname" id="">Nom</label>
+          <input
+            name="lastname"
+            id=""
+            aria-labelledby="label-lastname"
+            placeholder="Nom"
+          />
+        </div>
+        <div class="main--form__input">
+          <label for="email" id="">Email</label>
+          <input
+            name="email"
+            id=""
+            aria-labelledby="label-email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="main--form__input">
+          <label for="message" id="">Votre message</label>
+          <textarea
+            name="message"
+            id=""
+            aria-labelledby="label-message"
+            placeholder="Votre message..."
+          ></textarea>
+        </div>
+        <input
+          type="submit"
+          value="Envoyer"
+          class="main--form__send"
+          title="Send"
+        />
+      </form>
 
+      <div class="main--modal">
+        <div class="main--modal__close">X</div>
+          <!-- <div class="main--modal__allImg">
+              <img class="main--modal__allImg--pictures active" src="/img/photographers_pictures/Mimi/Animals_Rainbow.jpg" alt="">
+              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Event_BenevidesWedding.jpg" alt="">
+              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Portrait_Nora.jpg" alt="">
+              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Portrait_Wednesday.jpg" alt="">
+          </div> -->
+        <div class="main--modal__direction">
+            <span class="btnLeft">←</span>
+            <span class="btnRight">→</span>
+        </div>
+      </div>
     </main>
-</body>
+
+    <script src="js/utils/contact.js"></script>
+    <script src="js/utils/modal.js"></script>
+    <script src="js/factories/photographersMedias.js"></script>
+    <script src="js/pages/medias.js"></script>
+
+  </body>
 </html>

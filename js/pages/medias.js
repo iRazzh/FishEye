@@ -26,12 +26,11 @@ initPhotographer();
 async function displayData(medias, id, nbLikes) {
   // Récupère la section pour les medias
   const mediasSection = document.querySelector(".main--medias");
+  const mediasLightbox = document.querySelector(".main--modal__allImg"); // Ajout de la section comprenant la Lightbox
+  // Permet de reset "mediasSection"
   mediasSection.innerHTML = "";
+  mediasLightbox.innerHTML = "";
 
-  // LIGHTBOX PAR ID
-  //
-  //
-  //
 
   // TRI PAR MEDIAS
   let mediaArray = [];
@@ -60,21 +59,29 @@ async function displayData(medias, id, nbLikes) {
   });
 
   // Permet de récupérer la page du photographe correspondant à son id
+  nbMedias = 0;
   medias.forEach((media) => {
     if (id == media.photographerId) {
+      nbMedias++
       const mediasModel = mediasFactory(media, nbLikes);
-      const userCardDOM = mediasModel.getUserCardDOM(nbLikes);
+      const userCardDOM = mediasModel.getUserCardDOM(nbLikes, nbMedias);
+      const userCardLightbox = mediasModel.getUserCardLightbox();
       mediasSection.appendChild(userCardDOM);
+      mediasLightbox.appendChild(userCardLightbox);
     }
   });
+  // Appelle la function generateContact() pour display la modale
+  generateContact();
+  // Appelle la function generateSliderLightbox() pour display la lightbox
+  generateSliderLightbox();
 }
-// INIT MEDIAS PHOTOGRAPHERS
-async function init() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const id = urlParams.get("id");
-
-  fetch("./js/data/photographers.json")
+  // INIT MEDIAS PHOTOGRAPHERS
+  async function init() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get("id");
+    
+    fetch("./js/data/photographers.json")
     .then((response) => {
       return response.json();
     })

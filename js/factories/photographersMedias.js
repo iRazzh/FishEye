@@ -31,20 +31,21 @@ function mediasFactory(data) {
   let showName = document.getElementsByClassName("main--presentation__article--photograph__name")[0].innerHTML;
   const pictureImg = `img/photographers_pictures/${showName}/${image}`;
   const pictureVideo = `img/photographers_pictures/${showName}/${video}`;
-
-  function getUserCardDOM(nbLikes) {
+  
+  
+  function getUserCardDOM(nbLikes, nbMedias) {
     let article = document.createElement("article");
     article.classList.add("main--medias__article");
+    
     let templateMedia = ``;
-
+  
     if (data.image) {
-      templateMedia = `<img src="${pictureImg}" "alt="Photographie s'intitulant ${title}">`;
+      templateMedia = `<img src="${pictureImg}" "alt="Photographie s'intitulant ${title}" class="photographer-medias">`;
     } else {
-      templateMedia = `<video src="${pictureVideo}" "alt="Vidéo s'intitulant ${title}">`;
+      templateMedia = `<video src="${pictureVideo}" "alt="Vidéo s'intitulant ${title}" class="photographer-medias">`;
     }
-
     let templateArticleMedias = `
-    <a href="#" class="main--medias__article--redirect">
+    <a href="#" class="main--medias__article--redirect" id="${nbMedias}">
       ${templateMedia}
     </a>
     <div class="main--medias__article--description">
@@ -61,14 +62,30 @@ function mediasFactory(data) {
     // Gère le nb de likes
     const displayLikes = document.getElementsByClassName("main--totaLike__number")[0];
     displayLikes.innerHTML = nbLikes;
-    
-    // Appelle la function generateContact() pour display la modale
-    generateContact();
-
-    // Appelle la function generateSliderLightbox() pour display la lightbox
-    generateSliderLightbox();
 
     return article;
   }
-  return { getUserCardDOM };
+
+  function getUserCardLightbox() {
+    let templateMediaLightbox = ``;
+  
+    if (data.image) {
+      // templateMediaLightbox = `<img src="${pictureImg}" alt="Photographie s'intitulant ${title}" class="main--modal__allImg--pictures active">`;
+      templateMediaLightbox = document.createElement("img");
+      templateMediaLightbox.setAttribute("src", `${pictureImg}`)
+      
+    } else {
+      // templateMediaLightbox = `<video src="${pictureVideo}" alt="Vidéo s'intitulant ${title}" class="main--modal__allImg--pictures active">`;
+      templateMediaLightbox = document.createElement("video");
+      templateMediaLightbox.setAttribute("src", `${pictureVideo}`)
+    }
+
+    templateMediaLightbox.classList.add("main--modal__allImg--pictures")
+    templateMediaLightbox.setAttribute("alt", `Vidéo s'intitulant ${title}`)
+
+    return templateMediaLightbox;
+  }
+
+  return { getUserCardDOM, getUserCardLightbox }; // Ajout du return de la fonction
 }
+

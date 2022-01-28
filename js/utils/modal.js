@@ -13,7 +13,7 @@ function generateSliderLightbox() {
     
     let count = 0;
     
-    function nextSlide() {
+    function slidePrecedent() {
       items[count].classList.remove("active");
     
       if (count > 0) {
@@ -24,7 +24,7 @@ function generateSliderLightbox() {
       items[count].classList.add("active");
       console.log(count);
     }
-    precedent.addEventListener("click", nextSlide);
+    precedent.addEventListener("click", slidePrecedent);
     
     function slideSuivante() {
       items[count].classList.remove("active");
@@ -40,20 +40,32 @@ function generateSliderLightbox() {
     suivant.addEventListener("click", slideSuivante);
     
     function closeModal() {
+      items.forEach( media => {
+        media.classList.remove("active");
+      })
       modal.style.display = "none";
       if (modal.style.display == "none") {
         btnContact.style.display = "block";
       }
     }
-
     btnClose.addEventListener("click", closeModal);
-    for (i = 0; i < aModal.length; i++) {
-      aModal[i].addEventListener("click", function () {
+
+    function openModal(position)
+    {
+      document.querySelector(`.main--modal__allImg--pictures:nth-child(${position})`).classList.add("active")
         modal.style.display = "block";
         if (modal.style.display == "block") {
           btnContact.style.display = "none";
 
         }
+    }
+    let cpt = 0;
+    for (i = 0; i < aModal.length; i++) {
+      truc = aModal[i].getAttribute("id")
+      aModal[i].addEventListener("click", (e) => {
+        count = e.target.parentNode.getAttribute("id")-1
+        openModal(count+1)
       });
+      cpt++
     }
 }

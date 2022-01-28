@@ -27,7 +27,6 @@ function generateContact() {
 
     
     // Création des différents regex
-    const regexLetters = /[A-Za-z]/;
     const regexNumber = /[0-9]/;
     const regexMail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     const regexSpecialsCharacters = /[§!@#$%^&*().?":{}|<>]/;

@@ -9,6 +9,9 @@
     // BODY PHOTOGRAPHER PAGE
     .main{
         padding: 3rem;
+        &--presentation{
+            padding: 1.5rem;
+        }
         &--select{
             display: flex;
             width: 100%;
@@ -22,18 +25,26 @@
                 }
             }
         }
+        &--modal{
+            width: 80%;
+            left: 10%;
+        }
     }
 }
 @media screen and (min-width: $width-laptop) {
     // HEADER HOMEPAGE
     .header{
+        margin: 0 3rem;
         justify-content: space-between;
         &--home{
             width: 20%;
         }
         &--title{
-            width: 20%;
+            width: 25%;
         }
+    }
+    .header-photographer{
+        margin: 0!important;
     }
     // BODY HOMEPAGE
     .authors{
@@ -48,18 +59,16 @@
         display: flex;
         flex-wrap: wrap;
         &--presentation{
+            padding: 2.5rem;
             &__article{
                 align-items: center;
                 &--photograph{
                     width: 30%;
                 }
                 &--btn{
-                    position: absolute;
-                    padding: 25px 25px;
-                    bottom: inherit;
-                    left: 35%;
+                    position: inherit;
+                    padding: 25px;
                     transform: inherit;
-                    top: 15rem;
                 }
                 img{
                     width: 200px;
@@ -87,16 +96,21 @@
             border-radius: 10px;
             right: 3rem;
         }
+        &--form{
+            width: 80%;
+            left: 10%;
+        }
     }
 }
 @media screen and (min-width: $width-desk) {
     // HEADER HOMEPAGE 
     .header{
+        margin: 0 6rem;
         &--home{
             width: 15%;
         }
         &--title{
-            width: 15%;
+            width: 20%;
         }
     }
     // BODY HOMEPAGE
@@ -112,7 +126,24 @@
         }
     }
     .main--form{
-        width: 60%;
-        left: 18%;
+        width: 50%;
+        left: 25%;
     }
+    .main--form__send{
+        padding: 1rem 3rem;
+    }
+}
+@media screen and (min-width: 1441px){
+    .main, .header-photographer{
+        padding: 3rem 13rem;
+        &--form{
+            width: 40%;
+            left: 30%;
+        }
+    }
+    .main--modal{
+        width: 60%;
+        height: auto;
+        left: 20%;
+        }
 }

@@ -11,12 +11,12 @@ function photographerHeader(data) {
     if (idPhotographer == id) {
       const templateProfil = ` 
             <div class="main--presentation__article--photograph">
-                <h2 class="main--presentation__article--photograph__name">${name}</h2>
+                <h1 class="main--presentation__article--photograph__name">${name}</h1>
                 <p class="main--presentation__article--photograph__loca">${city}, ${country}</p>
                 <p class="main--presentation__article--photograph__description">${tagline}</p>
             </div>
-            <button class="main--presentation__article--btn">Contactez-moi</button>
-            <a href='#'><img src="${picture}"></a>`;
+            <button class="main--presentation__article--btn" title="Contactez-moi">Contactez-moi</button>
+            <a href='#'><img src="${picture}" alt="Portrait de ${name}"></a>`;
       article.innerHTML = templateProfil;
     }
     return article;
@@ -45,14 +45,16 @@ function mediasFactory(data) {
       templateMedia = `<video src="${pictureVideo}" "alt="Vidéo s'intitulant ${title}" class="photographer-medias">`;
     }
     let templateArticleMedias = `
-    <a href="#" class="main--medias__article--redirect" id="${nbMedias}">
+    <a href="#" class="main--medias__article--redirect" id="${nbMedias}" alt="${title}">
       ${templateMedia}
     </a>
     <div class="main--medias__article--description">
       <h2 class="main--medias__article--description__title">${title}</h2>
       <div class="main--medias__article--description__like">
         <span class="main--medias__article--description__like--number">${likes}</span>
-        <i id="icon" class="far fa-heart main--medias__article--description__like--heart"></i>
+        <a href="#">
+          <i id="icon" class="far fa-heart main--medias__article--description__like--heart" aria-label="likes"></i>
+        </a>
       </div>
     </div>
     `;
@@ -70,12 +72,10 @@ function mediasFactory(data) {
     let templateMediaLightbox = ``;
   
     if (data.image) {
-      // templateMediaLightbox = `<img src="${pictureImg}" alt="Photographie s'intitulant ${title}" class="main--modal__allImg--pictures active">`;
       templateMediaLightbox = document.createElement("img");
       templateMediaLightbox.setAttribute("src", `${pictureImg}`)
       
     } else {
-      // templateMediaLightbox = `<video src="${pictureVideo}" alt="Vidéo s'intitulant ${title}" class="main--modal__allImg--pictures active">`;
       templateMediaLightbox = document.createElement("video");
       templateMediaLightbox.setAttribute("src", `${pictureVideo}`)
     }

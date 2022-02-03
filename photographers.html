@@ -14,9 +14,9 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header header-photographer">
       <a href="index.html" class="header--home">
-        <img src="./img/logo/logo_fisheye.png" alt="Logo de FishEye" />
+        <img src="./img/logo/logo_fisheye.png" alt="Page d'accueil de FishEye" />
       </a>
     </header>
 
@@ -26,7 +26,7 @@
 
       <section class="main--select">
         <h3>Trier par</h3>
-        <select name="orderby" id="orderby">
+        <select name="Trier par" id="orderby">
           <option value="popularite" class="sort">Popularité</option>
           <option value="date" class="sort">Date</option>
           <option value="titre" class="sort">Titre</option>
@@ -34,7 +34,6 @@
       </section>
 
       <section class="main--medias">
-        
       </section>
 
       <div class="main--totalLike">
@@ -51,7 +50,7 @@
               >Mimi Keel</span
             >
           </h2>
-          <button class="main--form__titleClose--closeModal">X</button>
+          <button class="main--form__titleClose--closeModal" title="Fermer le formulaire">X</button>
         </div>
         <div class="main--form__input">
           <label for="firstname" id="">Prénom</label>
@@ -97,22 +96,18 @@
         />
       </form>
 
-      <div class="main--modal">
-        <div class="main--modal__close">X</div>
-          <div class="main--modal__allImg">
-              <!-- <img class="main--modal__allImg--pictures active" src="/img/photographers_pictures/Mimi/Animals_Rainbow.jpg" alt="">
-              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Event_BenevidesWedding.jpg" alt="">
-              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Portrait_Nora.jpg" alt="">
-              <img class="main--modal__allImg--pictures " src="/img/photographers_pictures/Mimi/Portrait_Wednesday.jpg" alt=""> -->
-          </div>
-          <div id="lightbox-media"></div>
-          <div id="lightbox-name"></div>
-        <div class="main--modal__direction">
-            <span class="btnLeft">←</span>
-            <span class="btnRight">→</span>
-        </div>
-      </div>
     </main>
+    <div class="main--modal">
+      <div class="main--modal__close">X</div>
+        <div class="main--modal__allImg">
+        </div>
+        <div id="lightbox-media"></div>
+        <div id="lightbox-name"></div>
+      <div class="main--modal__direction">
+          <span class="btnLeft">←</span>
+          <span class="btnRight">→</span>
+      </div>
+    </div>
 
     <script src="js/utils/contact.js"></script>
     <script src="js/factories/photographersMedias.js"></script>

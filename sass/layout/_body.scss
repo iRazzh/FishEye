@@ -203,6 +203,9 @@
     left: 0;
     top: 0;
     background-color: white;
+    a{
+      text-decoration: none;
+    }
     &__close{
       text-align: right;
       color: $color-text;
@@ -213,10 +216,10 @@
     }
     &__allImg{
         width: 80%;
-        margin: 0 auto;
+        margin: 4rem auto;
         &--pictures{
             width: 100%;
-            height: 450px;
+            height: 600px;
             object-fit: cover;
             display: none;
         }
@@ -227,7 +230,7 @@
     &__direction{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         .btnLeft, .btnRight{
             font-size: 40px;
             color: $color-text;

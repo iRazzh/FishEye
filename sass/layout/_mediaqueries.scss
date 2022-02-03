@@ -26,8 +26,7 @@
             }
         }
         &--modal{
-            width: 80%;
-            left: 10%;
+            width: 100%;
         }
     }
 }
@@ -101,6 +100,13 @@
             left: 10%;
         }
     }
+    .main--modal__allImg{
+        margin: 4rem auto 2rem;
+    }
+    .main--modal__allImg--pictures{
+        height: 750px;
+        object-fit: contain;
+    }
 }
 @media screen and (min-width: $width-desk) {
     // HEADER HOMEPAGE 
@@ -141,9 +147,4 @@
             left: 30%;
         }
     }
-    .main--modal{
-        width: 60%;
-        height: auto;
-        left: 20%;
-        }
 }

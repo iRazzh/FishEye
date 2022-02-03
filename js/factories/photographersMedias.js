@@ -70,7 +70,7 @@ function mediasFactory(data) {
 
   function getUserCardLightbox() {
     let templateMediaLightbox = ``;
-  
+    
     if (data.image) {
       templateMediaLightbox = document.createElement("img");
       templateMediaLightbox.setAttribute("src", `${pictureImg}`)

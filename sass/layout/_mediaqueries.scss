@@ -17,12 +17,13 @@
             width: 100%;
             margin-bottom: 4rem;
             h3{
-                margin-right: 2rem;
+                margin-right: 1.5rem;
             }
-            select{
-                .barre{
-                    border: 1px solid black;
-                }
+            &__order{
+                padding: 10px;
+                border-radius: 5px;
+                background-color: $color-text;
+                color: white;
             }
         }
         &--modal{
@@ -94,6 +95,11 @@
             padding: 2rem;
             border-radius: 10px;
             right: 3rem;
+            &__section{
+                &--number, .heartLike, &--price{
+                    font-size: 25px;
+                }
+            }
         }
         &--form{
             width: 80%;
@@ -134,9 +140,15 @@
     .main--form{
         width: 50%;
         left: 25%;
+        &__send{
+            padding: 1rem 3rem;
+        }
     }
-    .main--form__send{
-        padding: 1rem 3rem;
+    .main--modal__direction{
+        justify-content: space-between;
+        transform: translateY(-400px);
+        width: 90%;
+        margin: auto;
     }
 }
 @media screen and (min-width: 1441px){

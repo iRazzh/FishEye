@@ -31,7 +31,6 @@ async function displayData(medias, id, nbLikes) {
   mediasSection.innerHTML = "";
   mediasLightbox.innerHTML = "";
 
-
   // TRI PAR MEDIAS
   let mediaArray = [];
   let dataMedias = medias;
@@ -65,15 +64,14 @@ async function displayData(medias, id, nbLikes) {
       nbMedias++
       const mediasModel = mediasFactory(media, nbLikes);
       const userCardDOM = mediasModel.getUserCardDOM(nbLikes, nbMedias);
-      const userCardLightbox = mediasModel.getUserCardLightbox();
+      const userCardLightbox = mediasModel.getUserCardLightbox(nbMedias);
       mediasSection.appendChild(userCardDOM);
       mediasLightbox.appendChild(userCardLightbox);
     }
   });
-  // Appelle la function generateContact() pour display la modale
+  // Appelle la function generateContact() pour display la modale contact
   generateContact();
-  // Appelle la function generateSliderLightbox() pour display la lightbox
-  generateSliderLightbox();
+  setListener();
 }
   // INIT MEDIAS PHOTOGRAPHERS
   async function init() {
@@ -90,6 +88,9 @@ async function displayData(medias, id, nbLikes) {
         return b.likes - a.likes;
       });
       allLikes(myData.media,id)
+      // Appelle la function generateSliderLightbox() pour display la lightbox
+      generateSliderLightbox();
+      
     });
   }
   init();
@@ -98,7 +99,7 @@ async function displayData(medias, id, nbLikes) {
     // Récupère les likes pour les afficher
     let likesTotalPhotographers = [];
     for (let i = 0; i < myData.length; i++) {
-      if(myData[i].photographerId == id) {
+      if (myData[i].photographerId == id) {
         let likesPhoto = myData[i].likes;
         likesTotalPhotographers.push(likesPhoto);
       }
@@ -117,7 +118,7 @@ async function displayData(medias, id, nbLikes) {
         const liked = e.dataset.liked === "true";
         e.dataset.liked = !liked;
         elementCounter.innerHTML = likeSum +(!liked ? 1 : -1);
-        let total = document.querySelector(".main--totaLike__number");
+        let total = document.querySelector(".main--totalLike__section--number");
         if(liked) {
           buttonIcon.classList.add("far");
           buttonIcon.classList.remove("fas");

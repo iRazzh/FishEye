@@ -146,6 +146,7 @@ body {
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 .main--presentation__article img {
   width: 120px;
@@ -304,10 +305,13 @@ body {
     margin-bottom: 4rem;
   }
   .main--select h3 {
-    margin-right: 2rem;
+    margin-right: 1.5rem;
   }
-  .main--select select .barre {
-    border: 1px solid black;
+  .main--select__order {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #911C1C;
+    color: white;
   }
   .main--modal {
     width: 100%;
@@ -379,6 +383,9 @@ body {
     border-radius: 10px;
     right: 3rem;
   }
+  .main--totalLike__section--number, .main--totalLike__section .heartLike, .main--totalLike__section--price {
+    font-size: 25px;
+  }
   .main--form {
     width: 80%;
     left: 10%;
@@ -416,9 +423,15 @@ body {
     width: 50%;
     left: 25%;
   }
-
   .main--form__send {
     padding: 1rem 3rem;
+  }
+
+  .main--modal__direction {
+    justify-content: space-between;
+    transform: translateY(-400px);
+    width: 90%;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1441px) {

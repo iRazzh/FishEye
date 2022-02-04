@@ -2,6 +2,7 @@
 function photographerHeader(data) {
   const { name, id, city, country, tagline, price, portrait } = data;
   const picture = `img/photographers_id/${portrait}`;
+  const showPrice = document.getElementsByClassName("main--totalLike__section--price")[0];
 
   function getUserCardDOM() {
     let article = document.createElement("article");
@@ -11,14 +12,16 @@ function photographerHeader(data) {
     if (idPhotographer == id) {
       const templateProfil = ` 
             <div class="main--presentation__article--photograph">
-                <h1 class="main--presentation__article--photograph__name">${name}</h1>
+                <h1 class="main--presentation__article--photograph__name" id="namePhotographer">${name}</h1>
                 <p class="main--presentation__article--photograph__loca">${city}, ${country}</p>
                 <p class="main--presentation__article--photograph__description">${tagline}</p>
             </div>
             <button class="main--presentation__article--btn" title="Contactez-moi">Contactez-moi</button>
             <a href='#'><img src="${picture}" alt="Portrait de ${name}"></a>`;
       article.innerHTML = templateProfil;
-    }
+      // Permet d'ajuster le prix en fonction du photographe
+      showPrice.innerHTML = price + `€/ jour`;
+    }   
     return article;
   }
   return { getUserCardDOM };
@@ -32,7 +35,11 @@ function mediasFactory(data) {
   const pictureImg = `img/photographers_pictures/${showName}/${image}`;
   const pictureVideo = `img/photographers_pictures/${showName}/${video}`;
   
-  
+  // Permet de changer le nom du photographe dans la modal contact
+  const nameContact = document.querySelector(".main--modal__form--titleClose__title--name");
+  nameContact.innerHTML = showName;
+
+
   function getUserCardDOM(nbLikes, nbMedias) {
     let article = document.createElement("article");
     article.classList.add("main--medias__article");
@@ -42,7 +49,7 @@ function mediasFactory(data) {
     if (data.image) {
       templateMedia = `<img src="${pictureImg}" "alt="Photographie s'intitulant ${title}" class="photographer-medias">`;
     } else {
-      templateMedia = `<video src="${pictureVideo}" "alt="Vidéo s'intitulant ${title}" class="photographer-medias">`;
+      templateMedia = `<video controls src="${pictureVideo}" "alt="Vidéo s'intitulant ${title}" class="photographer-medias">`;
     }
     let templateArticleMedias = `
     <a href="#" class="main--medias__article--redirect" id="${nbMedias}" alt="${title}">
@@ -62,22 +69,26 @@ function mediasFactory(data) {
     article.innerHTML = templateArticleMedias;
 
     // Gère le nb de likes
-    const displayLikes = document.getElementsByClassName("main--totaLike__number")[0];
+    const displayLikes = document.getElementsByClassName("main--totalLike__section--number")[0];
     displayLikes.innerHTML = nbLikes;
 
     return article;
   }
 
-  function getUserCardLightbox() {
+  function getUserCardLightbox(nbMedias) {
     let templateMediaLightbox = ``;
     
     if (data.image) {
       templateMediaLightbox = document.createElement("img");
-      templateMediaLightbox.setAttribute("src", `${pictureImg}`)
-      
+      templateMediaLightbox.setAttribute("src", `${pictureImg}`);
+      templateMediaLightbox.setAttribute("data-position", nbMedias);
+      templateMediaLightbox.setAttribute("data-title", `${title}`)
     } else {
       templateMediaLightbox = document.createElement("video");
-      templateMediaLightbox.setAttribute("src", `${pictureVideo}`)
+      templateMediaLightbox.setAttribute("controls", "");
+      templateMediaLightbox.setAttribute("src", `${pictureVideo}`);
+      templateMediaLightbox.setAttribute("data-position", nbMedias);
+      templateMediaLightbox.setAttribute("data-title", `${title}`)
     }
 
     templateMediaLightbox.classList.add("main--modal__allImg--pictures")

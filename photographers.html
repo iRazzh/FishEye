@@ -10,8 +10,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
   </head>
   <body>
     <header class="header header-photographer">
@@ -26,7 +25,7 @@
 
       <section class="main--select">
         <h3>Trier par</h3>
-        <select name="Trier par" id="orderby">
+        <select name="Trier par" id="orderby" class="main--select__order">
           <option value="popularite" class="sort">Popularité</option>
           <option value="date" class="sort">Date</option>
           <option value="titre" class="sort">Titre</option>
@@ -37,18 +36,17 @@
       </section>
 
       <div class="main--totalLike">
-        <span class="main--totaLike__number"></span>
-        <i class="far fa-heart heartLike"></i>
-        <span class="main--totalLike__price">300€ / jour</span>
+        <div class="main--totalLike__section">
+          <span class="main--totalLike__section--number"></span>
+          <i class="fas fa-heart heartLike"></i>
+        </div>
+        <span class="main--totalLike__section--price"></span>
       </div>
-
       <form action="" method="" id="contact_modal" class="main--form">
         <div class="main--form__titleClose">
           <h2 class="main--form__titleClose__title">
             Contactez-moi
-            <span class="main--modal__form--titleClose__title--name"
-              >Mimi Keel</span
-            >
+            <span class="main--modal__form--titleClose__title--name"></span>
           </h2>
           <button class="main--form__titleClose--closeModal" title="Fermer le formulaire">X</button>
         </div>
@@ -95,8 +93,8 @@
           title="Send"
         />
       </form>
-
     </main>
+    
     <div class="main--modal">
       <a href="#">
         <div class="main--modal__close">X</div>

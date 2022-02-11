@@ -284,6 +284,11 @@ body {
   font-size: 40px;
   color: #911C1C;
 }
+.main--modal__name {
+  text-align: center;
+  font-size: 30px;
+  color: #911C1C;
+}
 
 @media screen and (min-width: 426px) {
   .header {
@@ -396,7 +401,7 @@ body {
   }
 
   .main--modal__allImg--pictures {
-    height: 750px;
+    height: 600px;
     object-fit: contain;
   }
 }
@@ -441,6 +446,11 @@ body {
   .main--form, .header-photographer--form {
     width: 40%;
     left: 30%;
+  }
+
+  .main--modal__allImg--pictures {
+    height: 800px;
+    object-fit: contain;
   }
 }
 

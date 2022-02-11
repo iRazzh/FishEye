@@ -237,4 +237,9 @@
             color: $color-text;
         }
     }
+    &__name{
+      text-align: center;
+      font-size: 30px;
+      color: $color-text;
+    }
 }

@@ -110,7 +110,7 @@
         margin: 4rem auto 2rem;
     }
     .main--modal__allImg--pictures{
-        height: 750px;
+        height: 600px;
         object-fit: contain;
     }
 }
@@ -158,5 +158,9 @@
             width: 40%;
             left: 30%;
         }
+    }
+    .main--modal__allImg--pictures{
+        height: 800px;
+        object-fit: contain;
     }
 }

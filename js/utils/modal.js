@@ -43,7 +43,6 @@ function generateSliderLightbox() {
       }
       items[count].classList.add("active");
       document.querySelector(".main--modal__name").innerHTML = items[count].getAttribute("data-title");
-      console.log(count)
     }
     suivant.addEventListener("click", slideSuivante);
     
@@ -65,6 +64,8 @@ function generateSliderLightbox() {
           slidePrecedent();
       } else if(e.keyCode === 39) {
         slideSuivante();
+      } else if(e.keyCode === 27) {
+        closeModal();
       }
     }
     document.addEventListener('keydown', keyPress);

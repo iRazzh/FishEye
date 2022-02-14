@@ -15,7 +15,6 @@ function generateSliderLightbox() {
       elt = document.getElementsByClassName("active")[0];
       // Permet de connaître la position de l'image || Le -1 permet de reprendre à zéro 
       count = elt.getAttribute("data-position")-1;
-      console.log(count)
       elt.classList.remove("active");
 
       if (count > 0) {
@@ -25,7 +24,6 @@ function generateSliderLightbox() {
       }
       items[count].classList.add("active");
       document.querySelector(".main--modal__name").innerHTML = items[count].getAttribute("data-title");
-      console.log(count)
     }
     precedent.addEventListener("click", slidePrecedent);
     
@@ -33,7 +31,6 @@ function generateSliderLightbox() {
       elt = document.getElementsByClassName("active")[0];
       // Permet de connaître la position de l'image || Le -1 permet de reprendre à zéro 
       count = elt.getAttribute("data-position")-1;
-      console.log(count)
       elt.classList.remove("active");
 
       if (count < nbSlide - 1) {

@@ -27,7 +27,7 @@ async function displayData(medias, id, nbLikes) {
   // Récupère la section pour les medias
   const mediasSection = document.querySelector(".main--medias");
   const mediasLightbox = document.querySelector(".main--modal__allImg"); // Ajout de la section comprenant la Lightbox
-  // Permet de reset "mediasSection"
+  // Permet de reset les sections
   mediasSection.innerHTML = "";
   mediasLightbox.innerHTML = "";
 

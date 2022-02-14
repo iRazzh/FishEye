@@ -25,7 +25,7 @@
 
       <section class="main--select">
         <h3>Trier par</h3>
-        <select name="Trier par" id="orderby" class="main--select__order">
+        <select aria-label="Trier" name="Trier par" id="orderby" class="main--select__order">
           <option value="popularite" class="sort">Popularité</option>
           <option value="date" class="sort">Date</option>
           <option value="titre" class="sort">Titre</option>
@@ -35,13 +35,14 @@
       <section class="main--medias">
       </section>
 
-      <div class="main--totalLike">
+      <section class="main--totalLike">
         <div class="main--totalLike__section">
           <span class="main--totalLike__section--number"></span>
           <i class="fas fa-heart heartLike"></i>
         </div>
         <span class="main--totalLike__section--price"></span>
-      </div>
+      </section>
+
       <form action="" method="" id="contact_modal" class="main--form">
         <div class="main--form__titleClose">
           <h2 class="main--form__titleClose__title">
@@ -95,7 +96,7 @@
       </form>
     </main>
     
-    <div class="main--modal">
+    <section class="main--modal">
       <a href="#">
         <div class="main--modal__close">X</div>
       </a>
@@ -112,7 +113,7 @@
           <span class="btnRight">→</span>
         </a>
       </div>
-    </div>
+    </section>
 
     <script src="js/utils/contact.js"></script>
     <script src="js/factories/photographersMedias.js"></script>

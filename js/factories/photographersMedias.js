@@ -60,7 +60,7 @@ function mediasFactory(data) {
       <div class="main--medias__article--description__like">
         <span class="main--medias__article--description__like--number">${likes}</span>
         <a href="#">
-          <i id="icon" class="far fa-heart main--medias__article--description__like--heart" aria-label="likes"></i>
+          <span><i id="icon" class="far fa-heart main--medias__article--description__like--heart" aria-label="likes"></i></span>
         </a>
       </div>
     </div>
